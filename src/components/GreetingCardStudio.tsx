@@ -303,7 +303,7 @@ export const GreetingCardStudio: React.FC<GreetingCardStudioProps> = ({
 
           <div className="mt-2 flex items-center justify-between w-full text-[10px] font-mono-tech opacity-65 pt-2">
             <span style={{ color: activeTheme.textSecondary }}>
-              SAMVAT 2082–2083
+              SAMVAT 2026
             </span>
             <span style={{ color: activeTheme.textSecondary }}>
               ROYAL PATRIKA {serialCode}

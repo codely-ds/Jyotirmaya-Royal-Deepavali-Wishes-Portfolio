@@ -392,7 +392,7 @@ export function App() {
             </span>
             <span className="text-[#9B8265]">•</span>
             <span className="font-mono-tech text-[11px] uppercase tracking-[0.2em] text-[#D8C3A5]">
-              FESTIVAL OF LIGHTS • SAMVAT 2082–2083
+              FESTIVAL OF LIGHTS • SAMVAT 2026
             </span>
             <span className="text-[#FFB703]">✦</span>
           </div>
@@ -648,7 +648,7 @@ export function App() {
           <div className="pt-4 border-t border-[#FFB703]/10 w-full max-w-md flex items-center justify-center gap-1.5 text-[11px] font-mono-tech text-[#9B8265]">
             <span>MADE WITH</span>
             <Heart className="w-3 h-3 text-[#E63946] fill-current" />
-            <span>FOR THE FESTIVAL OF LIGHTS • VIKRAM SAMVAT 2082–2083</span>
+            <span>FOR THE FESTIVAL OF LIGHTS • VIKRAM SAMVAT 2026</span>
           </div>
         </div>
       </footer>
