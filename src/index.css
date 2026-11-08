@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-velvet: #0C0612;
+    --bg-plum: #180C24;
+    --glass-kumkum: rgba(36, 16, 48, 0.72);
+    --text-ivory: #FDFBF7;
+    --text-sandalwood: #D8C3A5;
+    --text-bronze: #9B8265;
+    --accent-gold: #FFB703;
+    --accent-sindoor: #E63946;
+    --accent-peacock: #118AB2;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0C0612;
+    color: #FDFBF7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif-royal {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-mono-tech {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-devanagari {
+    font-family: 'Noto Serif Devanagari', 'Cormorant Garamond', serif;
+  }
+}
+
+/* Metallic Gold Foil Gradient Text */
+.text-gold-foil {
+  background: linear-gradient(135deg, #FFF3B0 0%, #FFB703 38%, #FB8500 72%, #FFE57F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #FFF3B0 0%,
+    #FFB703 25%,
+    #FFE57F 50%,
+    #FB8500 75%,
+    #FFF3B0 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerFlow 6s linear infinite;
+}
+
+@keyframes shimmerFlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Realistic Diya Flame Physics Keyframes */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scaleX(1) scaleY(1) rotate(-0.8deg);
+    opacity: 0.98;
+  }
+  25% {
+    transform: scaleX(0.95) scaleY(1.06) rotate(1.2deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(1.04) scaleY(0.96) rotate(-1.5deg);
+    opacity: 0.94;
+  }
+  75% {
+    transform: scaleX(0.97) scaleY(1.04) rotate(0.9deg);
+    opacity: 1;
+  }
+}
+
+@keyframes innerCorePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.08, 1.14);
+    opacity: 1;
+  }
+}
+
+@keyframes haloBreath {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.72;
+  }
+}
+
+@keyframes rangoliSlowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rangoliReverseSpin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes toranSway {
+  0%, 100% {
+    transform: rotate(-0.6deg);
+  }
+  50% {
+    transform: rotate(0.6deg);
+  }
+}
+
+.animate-flame {
+  transform-origin: 50% 90%;
+  animation: flameFlicker 2.1s ease-in-out infinite;
+}
+
+.animate-flame-fast {
+  transform-origin: 50% 90%;
+  animation: flameFlicker 1.4s ease-in-out infinite;
+}
+
+.animate-core {
+  transform-origin: 50% 88%;
+  animation: innerCorePulse 1.6s ease-in-out infinite;
+}
+
+.animate-halo {
+  transform-origin: 50% 50%;
+  animation: haloBreath 3.2s ease-in-out infinite;
+}
+
+.animate-rangoli-cw {
+  animation: rangoliSlowSpin 95s linear infinite;
+}
+
+.animate-rangoli-ccw {
+  animation: rangoliReverseSpin 120s linear infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4.5s ease-in-out infinite;
+}
+
+.animate-toran {
+  transform-origin: 50% 0%;
+  animation: toranSway 5s ease-in-out infinite;
+}
+
+/* Zari Double Hairline Border & Kumkum Glass */
+.kumkum-glass {
+  background: rgba(36, 16, 48, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.zari-card {
+  background: linear-gradient(165deg, rgba(34, 15, 50, 0.88) 0%, rgba(18, 8, 28, 0.94) 100%);
+  border: 1px solid rgba(255, 183, 3, 0.25);
+  box-shadow: 0 20px 50px -15px rgba(8, 2, 14, 0.85), inset 0 1px 0 0 rgba(255, 243, 176, 0.14);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.zari-card:hover {
+  border-color: rgba(255, 183, 3, 0.65);
+  box-shadow: 0 24px 60px -12px rgba(255, 183, 3, 0.18), 0 0 28px -6px rgba(251, 133, 0, 0.22), inset 0 1px 0 0 rgba(255, 243, 176, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0C0612;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #331947;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 183, 3, 0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4E266B;
+  border-color: rgba(255, 183, 3, 0.6);
+}
